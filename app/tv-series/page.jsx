@@ -38,7 +38,7 @@ export default function TVSeries() {
                 handleSearch={handleSearch}
                 placeholder="Search for TV series"
             />
-            <Header isSearching={isSearching} searchResults={searchResults} query={query} />
+            <Header isSearching={isSearching} searchResults={searchResults} query={query} header={"TV-series"} />
             <div className="grid gap-4 grid-cols-2">
                 {searchResults.map(item => (
                     <Card item={item} key={nanoid()} />

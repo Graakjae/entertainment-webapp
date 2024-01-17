@@ -37,8 +37,13 @@ export default function Home() {
             />
 
             {isSearching ? null : <Trending />}
-            <Header isSearching={isSearching} searchResults={searchResults} query={query} />
-            <div className="grid gap-4 grid-cols-2">
+            <Header
+                isSearching={isSearching}
+                searchResults={searchResults}
+                query={query}
+                header={"Recommended for you"}
+            />
+            <div className="relative grid justify-between gap-4 grid-cols-2 ">
                 {searchResults.map(item => (
                     <Card item={item} key={nanoid()} />
                 ))}

@@ -1,4 +1,4 @@
-export const Header = ({ isSearching, searchResults, query }) => {
+export const Header = ({ isSearching, searchResults, query, header }) => {
     return (
         <div>
             {isSearching ? (
@@ -6,7 +6,7 @@ export const Header = ({ isSearching, searchResults, query }) => {
                     Found {searchResults.length} results for "{query}"
                 </h2>
             ) : null}
-            {isSearching ? null : <h2 className="my-[24px] text-[20px]">Recommended for you</h2>}
+            {isSearching ? null : <h2 className="my-[24px] text-[20px]">{header}</h2>}
         </div>
     );
 };

@@ -33,7 +33,7 @@ export default function Movies() {
     return (
         <div className="px-[16px]">
             <SearchBar query={query} setQuery={setQuery} handleSearch={handleSearch} placeholder="Search for movies" />
-            <Header isSearching={isSearching} searchResults={searchResults} query={query} />
+            <Header isSearching={isSearching} searchResults={searchResults} query={query} header={"Movies"} />
             <div className="grid gap-4 grid-cols-2">
                 {searchResults.map(item => (
                     <Card item={item} key={nanoid()} />

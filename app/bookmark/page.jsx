@@ -37,10 +37,10 @@ export default function Bookmark() {
                 query={query}
                 setQuery={setQuery}
                 handleSearch={handleSearch}
-                placeholder="Search for movies or TV series"
+                placeholder="Search for bookmarked shows"
             />
-            <Header isSearching={isSearching} searchResults={searchResults} />
-            <div className="grid gap-4 grid-cols-2">
+            <Header isSearching={isSearching} searchResults={searchResults} header={"Bookmarked shows"} />
+            <div className="grid gap-4 grid-cols-2 justify-between">
                 {cart.map(item => (
                     <Card item={item} key={nanoid()} />
                 ))}
